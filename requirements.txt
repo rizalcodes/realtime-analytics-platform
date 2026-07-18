@@ -1,0 +1,29 @@
+# Core
+fastapi
+uvicorn[standard]
+dash
+dash-extensions  # WebSocket component for the live dashboard (Dash has no native WS support)
+plotly
+pandas
+
+# Database
+sqlalchemy
+psycopg2-binary
+
+# Real-time / caching
+redis
+websockets
+
+# Auth
+python-multipart  # form parsing for OAuth2PasswordRequestForm (login)
+python-jose[cryptography]
+passlib[bcrypt]
+bcrypt<4.1  # passlib 1.7.4 probes bcrypt internals removed in newer versions
+
+# Config
+python-dotenv
+email-validator  # pydantic EmailStr
+
+# Dev / test
+pytest
+httpx  # FastAPI TestClient
